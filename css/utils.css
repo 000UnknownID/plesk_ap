@@ -1,0 +1,30 @@
+@font-face {
+    font-family: "TTCommons-Bold";
+    src: url(../fonts/TTCommons-Bold.ttf);
+    font-weight: italic;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: "TTCommons-Regular";
+    src: url(../fonts/TTCommons-Regular.ttf);
+    font-weight: normal;
+    font-style: normal;
+}
+
+html, body, .container {
+    height: 100%;
+
+}
+
+p, h1 {
+    font-family: "TTCommons-Regular";
+    font-weight: 400;
+}   
+
+.centered_flex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+}

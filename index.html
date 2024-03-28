@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mozgoplesk interaction</title>
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+    <div id="intro" class="logo centered_flex">
+        <img id="logo" class="logo__img" src="assets/logo.svg" alt="">
+    </div>
+
+    <div class="container">
+
+        <div id="main-frame" class="main-frame">
+
+                <div class="start-buttons">
+                    <a id="bump"><img class="start-button start__circle" src="assets/buttons/bump.svg" alt=""></a>
+                    <a id="catch"><img class="start-button start__rectangle" src="assets/buttons/catch.svg" alt=""></a>
+                    <a id="clear"><img class="start-button start__triangle" src="assets/buttons/clear.svg" alt=""></a>
+                </div>
+
+                <div class="footer">
+                    <p>Юсуфов Лиор</p>
+                    <p>Б23ДЗ10</p>
+                </div>
+        </div>
+        
+        <div id="bump-window" class="window bump centered_flex" style="display: none;">
+            <div class="bump__game">
+                <div id="popup1" class="popup">
+                    <div class="popup-content">
+                        <h1>
+                            Поздравляем!
+                        </h1>
+                        <p class="promo_show">Вы выиграли промокод: </p>
+                        <p class="closePopup">
+                            Закрыть
+                        </p>
+                    </div>
+                </div>
+                <div class="cover">
+                    <span class="exit_bar exit-btn"><img src="./assets/close.svg" alt=""></span>
+                    <p id="score-bump" class="score">Cчёт: 0</p>
+                </div>
+                <div class="circles-items">
+                    <svg class="circles-mg" id="circles-mg" width="500" height="500" viewBox="0 0 931 1023" fill="none" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle class="circle-mg" cx="122.5" cy="61.5" r="61.5" fill="#000000"/>
+                        <circle class="circle-mg" cx="245.5" cy="272.5" r="61.5" fill="#000000"/>
+                        <circle class="circle-mg" cx="461.5" cy="122.5" r="61.5" fill="#000000"/>
+                        <circle class="circle-mg" cx="479.5" cy="463.5" r="61.5" fill="#000000"/>
+                        <circle class="circle-mg" cx="713.5" cy="651.5" r="61.5" fill="#000000"/>
+                        <circle class="circle-mg" cx="245.5" cy="610.5" r="61.5" fill="#000000"/>
+                        <circle class="circle-mg" cx="61.5" cy="487.5" r="61.5" fill="#000000"/>
+                        <circle class="circle-mg" cx="91.5" cy="837.5" r="61.5" fill="#000000"/>
+                        <circle class="circle-mg" cx="417.5" cy="733.5" r="61.5" fill="#000000"/>
+                        <circle class="circle-mg" cx="584.5" cy="898.5" r="61.5" fill="#000000"/>
+                        <circle class="circle-mg" cx="294.5" cy="948.5" r="61.5" fill="#000000"/>
+                        <circle class="circle-mg" cx="836.5" cy="961.5" r="61.5" fill="#000000"/>
+                        <circle class="circle-mg" cx="621.5" cy="272.5" r="61.5" fill="#000000"/>
+                        <circle class="circle-mg" cx="807.5" cy="426.5" r="61.5" fill="#000000"/>
+                        <circle class="circle-mg" cx="869.5" cy="149.5" r="61.5" fill="#000000"/>
+                    </svg>
+                </div>
+            </div>
+        </div>
+        <div id="catch-window" class="window catch centered_flex" style="display: none;">
+            <div class="catch__game">
+                <div id="cover-catch" class="cover">
+                    <span class="exit_bar exit-btn"><img src="./assets/close.svg" alt=""></span>
+                    <p id="score-catch" class="score">Cчёт: 0</p>
+                </div>
+                <div id="popup2" class="popup">
+                    <div class="popup-content">
+                        <h1>
+                            Поздравляем!
+                        </h1>
+                        <p class="promo_show">Вы выиграли промокод: </p>
+                        <p class="closePopup">
+                            Закрыть
+                        </p>
+                    </div>
+                </div>
+                <canvas id="canvas_back"></canvas>
+                <canvas id="canvas_c"></canvas>
+            </div>
+        </div>
+        <div id="clear-window" class="window clear centered_flex" style="display: none;">
+            <div class="clear__game">
+                <div id="cover-clear" class="cover cover_clear">
+                    <span class="exit_bar exit-btn"><img src="./assets/close.svg" alt=""></span>
+                </div>
+                <div class="clear_content">
+                    <div class="promos">
+                        <p class="promo promo-1">ПЛЕСК01</p>
+                        <p class="promo promo-2">ОТДЫХ77Й</p>
+                        <p class="promo promo-3">ТРУБЫ99</p>
+                        <p class="promo promo-4">МОЗГЧИСТ</p>
+                    </div>
+                    <img id="stroke" src="assets/stroke.png" alt="" hidden>
+                    <canvas class="clear__canvas" id="canvas_cl"></canvas>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="js/main.js"></script>
+    <script src="js/bumpGame.js"></script>
+    <script src="js/catchGame.js"></script>
+    <script src="js/clearGame.js"></script>
+</body>
+</html>

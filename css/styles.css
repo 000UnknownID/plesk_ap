@@ -1,0 +1,274 @@
+
+.logo {
+    background-color: white;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    position: fixed;
+    z-index: 100;
+}
+
+.logo__img {
+    animation: disappear 0.2s 0.5s infinite;
+}
+
+.main-frame {
+    background: url("../assets/background.gif");
+    background-position:center;  /* Sets reference point to scale from */
+    background-size: cover;
+
+    height: 100%;
+}
+
+.background-main {
+    width: 100%;
+    height: 100%;
+
+    overflow: hidden;
+    flex-direction: column;
+}
+
+
+
+/* Circles */
+.start-button {
+    position: absolute;
+    cursor: pointer;
+    width: 250px;
+    transition: transform 0.5s ease-in-out;
+}
+
+.start-button:hover {
+    transform: scale(1.2);
+}
+
+.start__circle {
+    width: 200px;
+    left: calc(50% - 300px);
+    top: calc(50% - 100px);
+}
+
+.start__rectangle {
+    width: 250px;
+    left: calc(50% - 40px);
+    top: calc(50% - 250px);
+}
+
+.start__triangle {
+    width: 200px;
+    left: calc(50% + 50px);
+    top: calc(50% + 50px);
+}
+
+/* Windows */
+
+.window {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    flex-direction: column;
+}
+
+.cover {
+    position: absolute;
+    z-index: 2;
+
+    padding: 30px 0;
+    background-color: #fefefe;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: right;
+    align-items: center;
+
+}
+
+.exit_bar {
+    cursor: pointer;
+
+    display: flex;
+    justify-content: right;
+    padding: 0 20px;
+}
+
+.exit_bar > p {
+    font-size: 20px;
+}
+
+.score {
+    position: absolute;
+    font-size: 30px;
+    left: 0;
+    padding: 0 20px;
+}
+
+/* Bump */
+
+.bump__game {
+    overflow: hidden;
+    width: 100%;
+    height: 100svh;
+    height: 100vh;
+
+    background-color: #fefefe;
+}
+
+.circles-items {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    animation: marqueeLine 20s linear infinite; 
+    z-index: 1;
+}
+
+.circles-mg {
+    width: 40%;
+    height: 40%;
+}
+
+.popup {
+    position: fixed;
+    z-index: 999;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(
+        0,
+        0,
+        0,
+        0.4
+    );
+    display: none;
+}
+
+.popup-content {
+    position: relative;
+    background-color: white;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: 250px auto;
+    padding: 20px;
+    border: 1px solid #888888;
+    width: 40%;
+    font-weight: bolder;
+}
+
+.closePopup {
+    display: block;
+    font-size: 2vw;
+    cursor: pointer;
+    margin-top: 20px;
+    text-align: center;
+    color: lightgray;
+    transition: color 1.5s ease-in-out;
+}
+
+.closePopup:hover {
+    color: gray;
+}
+
+.popup-content h1 {
+    font-size: 5vw;
+    text-align: center;
+}
+
+.promo_show {
+    font-size: 4vw;
+    text-align: center;
+}
+
+.show {
+    display: block;
+}
+
+/* Catch */
+
+.catch__game {
+    background-color: #fefefe;
+}
+
+#canvas_c, #canvas_back {
+    position: absolute;
+    background-color: transparent;
+}
+
+/* Clear */
+
+.cover_clear {
+    position: static;
+}
+
+.clear__canvas {
+    position: relative;
+    z-index: 999;
+}
+
+.clear__game {
+    background-color: #fefefe;
+}
+
+.clear__content {
+    position: relative;
+}
+
+#stroke {
+    height: 100%;
+    width: 100%;
+}
+
+.promos {
+    position: relative;
+    z-index: 1;
+    font-size: 40px;
+}
+
+.promo {
+    position: absolute;
+    font-size: 5vw;
+}
+
+.promo-1 {
+    top: 4vw;
+    right: 10vw;
+}
+
+.promo-2 {
+    top: 20vw;
+    left: 40vw;
+}
+
+.promo-3 {
+    transform: rotate(90deg);
+    top: 15vw;
+    left: 3vw;
+}
+
+.promo-4 {
+    left: 20vw;
+}
+
+.footer {
+    position:absolute;
+    bottom:0;
+    height: 50px;
+    width: 100%;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    background-color: white;
+    color: black;
+    display: flex;
+}
+
+.footer > p {
+    margin-left: 20px;
+    margin-right: 20px;
+    font-size: 2vw;
+}

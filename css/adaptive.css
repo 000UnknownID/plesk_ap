@@ -1,0 +1,32 @@
+@media only screen and (max-width: 670px) {
+    .bar__line {
+        width: 18vw;
+        height: 6vw;
+    }
+    
+    .bar__circle {
+        width: 6vw;
+        height: 6vw;
+    }
+    
+}
+
+@media only screen and (max-width: 705px) {
+    .start-buttons {
+        padding-top: 40px;
+        position: static;
+        display: flex;
+        flex-direction: column;
+        margin: 0 auto;
+        align-items: center;
+    }
+
+    .start-button {
+        width: 200px;
+        position: static;
+    }
+
+    .footer p {
+        font-size: 3vw;
+    }
+}
